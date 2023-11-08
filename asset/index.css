@@ -1,0 +1,454 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+ /*
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+*/
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  font-family: 'Cousine', monospace;
+  line-height: 1.05rem;
+  font-size: 0.75rem;
+  color: #050505;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =================================================== */
+/* ================= DARK MODE STUFF ================= */
+/* =================================================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    color-scheme: dark;
+    background-color: #282c33;
+    color: #cdcdcd;
+  }
+  editor .gutter.gutter-horizontal {
+    opacity: 0.6 !important;
+  }
+  editor .gutter.gutter-vertical {
+    opacity: 0.6 !important;
+  }
+  editor .content {
+    border: 1px solid #575757;
+    background-color: #282c34;
+    box-shadow: none;
+  }
+  editor .toggle-fold-button,
+  editor .toggle-wrap-button,
+  editor .toggle-wrap-button-html {
+    background: #1f2024;
+    color: #aaaaaa;
+    border: 1px solid #575757;
+  }
+  editor .toggle-fold-button:hover,
+  editor .toggle-wrap-button:hover,
+  editor .toggle-wrap-button-html:hover {
+    color: #d8d8d8;
+    border: solid 1px #bfbfbf;
+  }
+  menu-bar .menu-item:hover {
+    background: #424242;
+  }
+
+  account-modal .content-wrapper,
+  settings-modal .content-wrapper,
+  revisions-modal .content-wrapper,
+  login-modal .content-wrapper {
+    background: #2e3034;
+  }
+  account-modal .modal-header p,
+  settings-modal .modal-header p,
+  revisions-modal .modal-header p,
+  login-modal .modal-header p {
+    color: #8f8f8f;
+  }
+  account-modal button,
+  settings-modal button,
+  revisions-modal button,
+  login-modal button {
+    background: #474747;
+  }
+  account-modal button:hover,
+  settings-modal button:hover,
+  revisions-modal button:hover,
+  login-modal button:hover {
+    background: #565656;
+  }
+  account-modal span.link,
+  settings-modal span.link,
+  revisions-modal span.link,
+  login-modal span.link,
+  revisions-modal ul li span.clickable {
+    color: #6d6dee;
+  }
+
+  perchance-console #console-input {
+    background: initial !important;
+  }
+
+  #output-buttons-ctn {
+    background: #282c33 !important;
+  }
+  #output-buttons-ctn button {
+    border: 1px solid #585858 !important;
+    background: linear-gradient(to bottom, rgb(44 44 44) 0%, rgb(37 37 37) 47%, rgb(38 38 38) 100%) !important;
+  }
+  #output-buttons-ctn > span { /* auto reload checkbox container */
+    background-color: #404040 !important;
+  }
+
+  .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+    background-color: #282c33 !important;
+  }
+
+  menu-bar .menu-item.edit-generator-button {
+    color: #00d300 !important;
+  }
+  menu-bar .menu-item.account-modal-open-button {
+    color: #00d300 !important;
+  }
+}
+
+.cm-searching {
+  background-color: rgba(255, 255, 0, .4) !important;
+}
+
+.cm-square-bracket { color: #05a; }
+.cm-special-list-name { color: #05a; }
+.cm-curly-bracket { color: #f18c16; }
+
+.cm-s-one-dark .cm-square-bracket { color: #61afef; }
+.cm-s-one-dark .cm-special-list-name { color: #61afef; }
+.cm-s-one-dark .cm-curly-bracket { color: #f18c16; }
+.CodeMirror.cm-s-one-dark { background-color: #282c34 !important; }
+.cm-s-one-dark .cm-string-2 { color: #98c379 !important; }
+.cm-s-one-dark .cm-matchhighlight { background-color: #ffde631c; }
+.cm-s-one-dark .CodeMirror-selection-highlight-scrollbar { background-color: #ffdd6333; }
+
+/*
+.cm-s-one-light .cm-square-bracket { color: #05a; }
+.cm-s-one-light .cm-special-list-name { color: #05a; }
+.cm-s-one-light .cm-curly-bracket { color: #f18c16; }
+.cm-s-one-light .cm-string { color: #419c00 !important; }
+.cm-s-one-light .cm-string-2 { color: #419c00 !important; }
+.cm-s-one-light .cm-def { color: #05a !important; }
+.cm-s-one-light .cm-variable { color: #05a !important; }
+*/
+
+.CodeMirror.cm-s-one-light { background-color: #fafafa !important; }
+.cm-s-one-light .cm-string-2 { color: #50a14f !important; }
+.cm-s-one-light .cm-matchhighlight { background-color: #ffe06d52; }
+.cm-s-one-light .CodeMirror-selection-highlight-scrollbar { background-color: #c0ab5d52; }
+
+/*
+.cm-s-one-dark .cm-comment { color: #636a78 !important; }
+.cm-s-one-dark .cm-variable { color: #61afef !important; }
+.cm-s-one-dark .cm-variable-2 { color: #61afef !important; }
+*/
+/*
+.cm-comment { color: #A0A1A7 !important; }
+.cm-variable { color: #05a !important; }
+.cm-def { color: #05a !important; }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+  padding: 0.135em 0.5em;
+  border: 1px solid #afafaf;
+  background: linear-gradient(to bottom, rgb(245, 245, 245) 0%, rgb(236, 236, 236) 47%, rgb(223, 223, 223) 100%);
+  border-radius: 1px;
+}
+button:hover {
+  border-color: #909090;
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
